@@ -1,12 +1,30 @@
-# tÌnh dao h‡m cho c·c h‡m sau
+# t√≠nh dao h√†m cho c√°c h√†m sau
 import math
 
-# 1. f(x) = x
-def ham1():
+# 1. Identity
+# f(x) = x
+def ham_identity():
   return 1
 
-# 2. f(x) = 1/(1 + e^(-x) )
-def ham2(x):
+# 2. Logistic
+# f(x) = 1/(1 + e^(-x) )
+def ham_logistic(x):
   a = 1/(1 + math.exp(-x))
   print('f(x) * (1 - f(x))')
   return a*(1 - a)
+  
+# 3. Tanh
+# f(x) = tanh(x) = 2 / ((1 + e^(-2x)) - 1)
+def ham_tanh(x):
+  tanh = 2 / (math.exp(x) + math.exp(-x))
+  print('(2 / (e^x + e^-x))^2')
+  return tanh**2
+  
+ # 4. ReLU
+  # 0 khi x<0
+  # 1 khi x>=0
+def ham_ReLU(x):
+  if x < 0:
+    return 0
+  else:
+    return 1
