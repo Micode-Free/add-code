@@ -1,0 +1,12 @@
+# tính dao hàm cho các hàm sau
+import math
+
+# 1. f(x) = x
+def ham1():
+  return 1
+
+# 2. f(x) = 1/(1 + e^(-x) )
+def ham2(x):
+  a = 1/(1 + math.exp(-x))
+  print('f(x) * (1 - f(x))')
+  return a*(1 - a)
